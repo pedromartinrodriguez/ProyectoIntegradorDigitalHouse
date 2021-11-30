@@ -1,0 +1,56 @@
+.register{
+    background-color: #c2c0c0;
+    width: 80%;    
+    border: solid 1px #000;
+    border-radius: 10PX;    
+    padding: 20px 0;
+    margin: auto;
+    text-align: center;
+}
+.register .personal-info input,
+.register .password input{
+    margin: 10px 0;
+    padding: 8px;
+    width: 80%;
+    border-radius: 5px;
+    border: none;
+}
+.register .caracteristicas{
+    padding-left: 10%;
+    text-align: left;
+}
+.register h4{
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.register .botones input{
+    padding: 5px;
+    background-color: rgb(45, 45, 124);
+    color: white;
+    border-radius: 4px;
+    border: none;
+}
+.campo .tag option{
+    padding: 5px;
+    background-color: rgb(45, 45, 124);
+    color: white;
+    border-radius: 4px;
+    border: none;
+}
+.error-text{
+    color: crimson;
+}
+.error{
+    background-color: rgb(253, 203, 213);
+}
+.ok{
+    color:darkgreen
+}
+
+@media (min-width: 768px) {
+.register{
+    margin-top: 10px;
+}
+
+}

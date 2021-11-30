@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+        <!-- ## HEAD ## -->
+        <%- include('partials/head') %>
+        <!-- ## HEAD ## -->
+<body>
+        <!-- ### HEADER ### -->
+        <%- include('partials/header') %>
+        <!-- ### HEADER ### -->
+        
+        <main class="login">
+            <form id="form" action="/user/login" method="POST">
+                <div class="user">
+                    <input id="email" type="email" name="email" placeholder="Email" 
+                    class="form-control <%= locals.errors && errors.email ? 'is-invalid' : null %>"
+                    value="<%= locals.oldData ? oldData.email : null %>">
+                    <% if (locals.errors && errors.email) { %>
+                        <div class="error-text" style="color: red;">
+                            <%= errors.email.msg %> 
+                        </div>
+                    <% } %>
+                    <div class="errorEmail error-text"></div>
+                    <br>
+                    <input id="password" type="password" name="password" placeholder="Ingresá tu contraseña"    
+                    class="form-control <%= locals.errors && errors.password ? 'is-invalid' : null %>"
+                    value="<%= locals.oldData ? oldData.password : null %>">
+                        <% if (locals.errors && errors.password) { %>
+                            <div class="error-text" style="color: red;">
+                                <%= errors.password.msg %>
+                            </div>
+                        <% } %>
+                        <div class="errorPassword error-text"></div>
+                    <br>
+                </div>
+                <div class="recordarme">
+                    <label for="">
+                        <input type="checkbox" name="remember_user">
+                        Recordar mi usuario
+                    </label>
+                </div>
+                <div class="botones">
+                    <input type="submit" value="Ingresar" class="submit">
+                </div>
+            </form>
+        </main>
+
+                <!-- ## footer ## -->
+                <%- include('partials/footer') %>
+                <!-- ## footer ## -->
+
+                <script src="/js/loginValidation.js"></script>
+</body>
+</html>
